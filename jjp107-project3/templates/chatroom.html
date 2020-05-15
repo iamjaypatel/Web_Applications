@@ -1,0 +1,39 @@
+{% extends "layout.html" %}
+<body>
+    {% block body %}
+        <div>
+            <h2 id='chatroomName'>You are in: {{ chatroomName }}</h2>
+            <h2><br/></h2>
+            <div>
+                <table id="chatLog">
+                    <thead>
+                        <tr>
+                            <th><h3>Sent By</h3></th>
+                            <th><h3>Message</h3></th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {% if post %}
+                            {% for msg in post %}
+                            <tr>
+                                <td>{{ msg.post_msg }}</td>
+                                <td>{{ msg.message }}</td>
+                            </tr>
+                            {% endfor %}
+                        {% endif %}
+                    </tbody>
+                </table>
+            </div>
+            <div>
+                <hr>
+                <form method="POST">
+                    <div>
+                        <input type="text" id="txtMessage" name="post" required autofocus>
+                        <input id="postMsg" type="submit" value="Send">
+                    </div>
+                </form>
+            </div>
+        </div>        
+        <script type="text/javascript" src="{{ url_for('static', filename='script.js') }}"></script>
+    {% endblock %}
+    </body>

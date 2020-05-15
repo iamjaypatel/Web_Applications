@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Budget App: RestAPI</title>
+    <script type="text/javascript" src="{{ url_for('static', filename='main.js') }}"></script>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
+  </head>
+  <body>
+    <h1 align="center">Welcome to The BUDGET App</h1>
+    <h2>.</h2>
+    <h3 align="center">Add Category</h3>
+    <form name="theForm" align="center">
+        <dl>
+            <dt>Category Name
+            <dt><input type="text" id="newCat" name="" value="" >
+            <dt>Budget
+            <dt><input type="number" id="budget" name="" value="">
+            <dt><input type="button" id="theButton" value="Add">
+    </form>
+    <h2>.</h2>
+    <h3 align="center">Budget Summary</h3>
+    <table id="theTable" align="center">
+    </table>
+
+    <h4 id="otherSpending" align="center">Other Spending:</h4>
+    <h2>.</h2>
+    <h3 align="center">Add Purchase</h3>
+    <form name="purchaseForm" align="center">
+        <dl>
+            <dt>Purchase Name
+            <dt><input type="text" id="purchaseName" name="" value="" >
+            <dt>Purchase Amount
+            <dt><input type="number" id="purchaseAmount" name="" value="">
+            <dt>Purchase Category
+            <dt><input type="type" id="cat" name="" value="">
+            <dt>Purchase Date
+            <dt><input type="date" id="date" name="" value="">
+            <dt><input type="button" id="purchaseButton" value="Add">
+    </form>
+    <h2>.</h2>
+    <h3 align="center">Previous Purchases</h3>
+    <table id="purchaseTable" align="center">
+    </table>
+	</body>
+</html>

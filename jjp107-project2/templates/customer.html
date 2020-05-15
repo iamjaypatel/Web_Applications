@@ -1,0 +1,22 @@
+{% extends "layout.html" %}
+{% block body %}
+<h2>Customer Account</h2><br />
+<h3>Your Events:</h3><br />
+{% if error %}<p class="error"><strong>Error:</strong> {{ error }}{% endif %}
+    <ul>
+        {% for event in events %}
+        <li>{{ event.name }} ({{ event.date }}) <a href='/cancelevent/{{event.date}}' ) }}">Click here
+                to cancel</a></li>
+        {% endfor %}
+    </ul>
+
+    <h3>Create a new Event:</h3><br />
+    <form method="POST">
+        Event Name:
+        <input type="text" name="get_event_name">
+        <br />
+        Please enter or select Event date:
+        <input type="date" name="get_event_date"><br />
+        <input type="submit" value="Create Event"><br />
+    </form>
+    {% endblock %}

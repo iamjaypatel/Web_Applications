@@ -1,0 +1,40 @@
+  
+{% extends "layout.html" %}
+{% block body %}
+<h2>Welcome!</h2><br />
+<div>
+        <a href="{{ url_for('create_chatroom') }}">Create Chatroom</a>
+        <h2><br /></h2>
+        <div>
+            {% if chatrooms %}
+            <h2>Avaliable Chatrooms</h2>
+            <form method="POST">
+                <table>
+                    <tbody>
+                        {% for person in chatrooms %}
+                        <tr>
+                            <td>
+                                <li>
+                                {{ person.name }}
+                                </li>
+                            </td>
+                            <td>
+                                <a href='chatroom/{{ person.name }}'>Join Chatroom</a>
+                            </td>
+                            {% if person.create_id == session['user_id'] %}
+                            <td>
+                                <button id='{{ person.chat_id }}'>Delete Chatroom</button>
+                                <input type='hidden' value="{{ person.chat_id }}" name='delete' readonly>
+                            </td>
+                            {% endif %}
+                        </tr>
+                        {% endfor %}
+                    </tbody>
+                </table>
+            </form>
+            {% else %}
+            <h2>No Chatrooms Avaliable at this Time</h2>
+            {% endif %}
+        </div>
+</div>
+{% endblock %}

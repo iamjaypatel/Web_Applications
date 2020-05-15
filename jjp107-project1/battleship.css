@@ -1,0 +1,50 @@
+.gridLightBlue {
+    background-color: lightblue;
+}
+
+.gridHitRed {
+    background-color: red;
+}
+
+.gridMissWhite {
+    background-color: white;
+}
+
+.hideGrid {
+    display: none;
+    visibility: hidden;
+}
+
+.showGrid {
+    display: block;
+    visibility: visible;
+}
+
+table {
+    margin: auto;
+    margin-bottom: 10px;
+    border-width: 2px;
+    border-color: black;
+    border-style: dashed;
+    background-color: navy;
+    padding: 5px;
+}
+
+td {
+    font-family: Arial;
+    font-size: 25px;
+    font-weight: bold;
+    text-align: center;
+    height: 30px;
+    width: 30px;
+    border-color: black;
+    border-style: solid;
+}
+
+.show_top10 {
+    height: auto;
+    width: 500px;
+    border-color: black;
+    border-style: dotted;
+    background-color: greenyellow;
+}

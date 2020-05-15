@@ -1,0 +1,43 @@
+========================================
+CS/COE 1520 Assignment Information Sheet
+----------------------------------------
+
+You must submit an information sheet with every assignment. Also be sure
+to submit all materials following the procedures described on the
+submission procedures page.
+
+Name: Jay Patel	  
+
+Lecture section: Monday, 5:30PM  
+
+Recitation day and time: Friday, 5PM 
+
+Assignment #: 3
+
+Program due date: 11/13/2019  
+
+Handed in date: 11/13/2019 
+
+Source code file name(s):
+
+chat.py
+models.py
+static/style.css
+static/script.js
+templates/chat_lobby.html
+templates/chatroom.html
+templates/create_chatroom.html
+templates/layout.html
+templates/login.html
+templates/newUser.html
+
+
+Does your project run without error?: Yes
+
+Additional comments to the grader: None
+
+
+
+
+
+

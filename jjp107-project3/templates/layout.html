@@ -1,0 +1,22 @@
+<!doctype html>
+<title>Cheap WhatsApp</title>
+<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
+<script src="http://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha256-pasqAKBDmFT4eHoN2ndd6lN370kFiGUFyTiUHWhU7k8=" crossorigin="anonymous"></script>
+<div class="page">
+    <h1>Cheap WhatsApp</h1>
+    <div class="metanav">
+        {% if not session.user_id %}
+        <a href="{{ url_for('login') }}">Log In</a>
+        {% else %}
+        <a href="{{ url_for('logout') }}">Log Out</a>
+            {% if session.room_id %}
+            <a><br /></a>
+            <a href="{{ url_for('leave_chatroom') }}">Leave Chatroom</a>
+            {% endif %}
+        {% endif %}
+    </div>
+    {% for message in get_flashed_messages() %}
+    <div class="flash">{{ message }}</div>
+    {% endfor %}
+    {% block body %}{% endblock %}
+</div>

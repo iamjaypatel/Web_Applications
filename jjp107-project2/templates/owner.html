@@ -1,0 +1,23 @@
+{% extends "layout.html" %}
+{% block body %}
+<h2>Owner</h2><br />
+<h4>Upcoming Events:</h4>
+{% if error %}<p class="error"><strong>Error:</strong> {{ error }}{% endif %}
+    <div>
+        {% for event in events %}
+        <h4>{{ event.name }} ({{ event.date }})</h4>
+        <h4>Staff members for the event:</h4>
+        {% for staff in event.event_staff %}
+        {{ staff.username }}<br />
+        {% endfor %}<br />
+        {% else %}
+        No upcoming events :(<br /><br />
+        {% endfor %}
+    </div>
+
+    <div>
+        <h2>Create a new Staff account</h2>
+        <a href="{{ url_for('newstaff') }}" action="{{ url_for('newstaff') }}" method="post">Create New
+            Account</a>
+    </div>
+    {% endblock %}

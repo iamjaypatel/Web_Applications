@@ -1,0 +1,18 @@
+{% extends "layout.html" %}
+{% block body %}
+<h2>Staff Account</h2><br />
+<div>
+    <h3>Events you signed up for:</h3><br />
+    {% if error %}<p class="error"><strong>Error:</strong> {{ error }}{% endif %}
+        {% for event in sign_up %}
+        <h4>-{{event.name}} ({{event.date}})</h4>
+        {% endfor %}
+        <h3>Events you can sign up for:</h3>
+        {% for event in avail_event %}
+        <form action="" method="POST">
+            <input type="radio" name="event" id="event" value="{{event.name}}"> {{event.name}} ({{event.date}})<br />
+            {% endfor %}<br />
+            <input type="submit" value="Submit">
+        </form>
+</div>
+{% endblock %}
